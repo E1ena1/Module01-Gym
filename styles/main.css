@@ -7,3 +7,144 @@ body {
     padding-right: 15px;
     margin: 0 auto;
 }
+.header {
+    padding-top: 50px;
+    padding-bottom: 28px;
+    display: flex;
+    justify-content: space-between;
+}
+.header-item {
+    display: flex;
+    gap: 92px;
+}
+.header-logo {
+    display: block;
+    background-image: url(../images/logo.svg);
+    width: 97px;
+    height: 30px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.header-nav {
+    list-style-type: none;
+    display: flex;
+    gap: 54px;
+    padding-left: 0;
+    margin: 0;
+}
+.header-nav a {
+    text-decoration: none;
+    color: #2B3541;
+    font-size: 18px;
+    line-height: 150%;
+}
+.header-social {
+    display: flex;
+    gap: 30px;
+}
+.header-instagram {
+    display: block;
+    background-image: url(../images/instagram.svg);
+    width: 30px;
+    height: 30px;
+    background-repeat: no-repeat;
+}
+.header-facebook {
+    display: block;
+    background-image: url(../images/facebook.svg);
+    width: 30px;
+    height: 30px;
+    background-repeat: no-repeat;
+}
+.text {
+    position: relative;
+}
+.title {
+    margin-top: 228px;
+    font-size: 48px;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    line-height: 125%;
+    color: #2B3541;
+    text-transform: uppercase;
+    max-width: 676px;
+}
+.desc {
+    font-size: 40px;
+    line-height: 120%;
+    color: #2B3541;
+    margin-bottom: 24px;
+}
+.desc-text {
+    font-size: 18px;
+    line-height: 150%;
+    color: #2B3541;
+    max-width: 297px;
+    margin-left: 92px;
+    margin-bottom: 54px;
+}
+.more {
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    line-height: 150%;
+    text-transform: uppercase;
+    color: #2B3541;
+    border: none;
+    background-color: #FBF138;
+    padding: 22px 30px;
+    margin-left: 92px;
+}
+.more:hover {
+    background-color: #2B3541;
+    color: #FBF138;
+    transition: 0.3s;
+}
+.arrow {
+    border: 3px solid #2B3541;
+    width: 52px;
+    height: 53px;
+    border-radius: 100%;
+    background-image: url(../images/arrow.svg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-color: transparent;
+    position: absolute;
+    bottom: -259px;
+    left: 0;
+    cursor: pointer;
+}
+.banner-box {
+    position: relative;
+    display: flex;
+}
+.box {
+    display: flex;
+    max-width: 790px;
+    width: 100%;
+    gap: 20px;
+    position: absolute;
+    top: 0;
+    z-index: -1;
+    right: -75px;
+}
+.box-left {
+    background: linear-gradient(90deg, #FBF138 0%, rgba(253, 249, 182, 0.45) 145.23%);
+    opacity: 0.2;
+    flex-basis: 70%;
+    height: 850px;
+}
+.box-right {
+    background: linear-gradient(90deg, #FDF9B6 0%, rgba(253, 249, 182, 0.7) 166.81%);
+    opacity: 0.2;
+    flex-basis: 30%;
+    height: 850px;
+}
+.box img {
+    width: 988px;
+    height: 811px;
+    position: absolute;
+    bottom: 0;
+    left: -97px;
+}
