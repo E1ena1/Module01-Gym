@@ -41,6 +41,7 @@
             </div>
         </div>
     </header>
+    <!--Блок с баннером Girl-->
     <div class="banner">
         <div class="container">
             <div class="banner-box">
@@ -49,7 +50,7 @@
                     <p class="desc"> &gt; 15&nbsp; тренировок</p>
                     <p class="desc-text">в области спортивной физиологии и нутрициологии</p>
                     <a href="#" class="more">Узнать подробнее</a>
-                    <button class="arrow" type="button"></button>
+                    <a href="#events" class="arrow"></a>
                 </div>
                 <div class="box">
                     <div class="box-left"></div>
@@ -60,7 +61,8 @@
         </div>
     </div>
     <main>
-        <div class="events">
+        <!--Блок "Ближайшие события"-->
+        <div id="events" class="events">
             <div class="container">
                 <h3 class="events-title">Ближайшие события</h3>
                 <div class="events-grid">
@@ -91,6 +93,7 @@
                 </div>
             </div>
         </div>
+         <!--Блок "Расписание тренировок"-->
         <div class="timetable">
             <div class="container">
                 <div class="timetable-header">
@@ -149,21 +152,133 @@
                 </div>
             </div>
         </div>
+        <!--Форма "Подписаться на рассылку"-->
         <div class="form">
             <div class="container">
                 <div class="form-subscribe">
                     <h1 class="form-title">Подпишитесь на рассылку</h1>
-                    <form action="">
-                        <input type="email" placeholder="Ваш e-mail">
-                        <button type="submit">ПОДПИСАТЬСЯ</button>
+                    <form class="form-inner" action="" >
+                        <div class="agreement">
+                            <input class="form-subscribe-input" type="email" placeholder="Ваш e-mail">
+                            <p class="agreement-checkbox">
+                                <input type="checkbox" id="checkbox" class="checkbox">
+                                <label class="checkbox-label" for="checkbox">Согласен с обработкой <a href="#" target="_blank">персональных данных</a></label>
+                            </p>
+                        </div>
+                        <button class="form-subscribe-btn" type="submit">ПОДПИСАТЬСЯ</button>
                     </form>
-                    <div class="agreement">
-                        <input type="checkbox" id="checkbox" class="checkbox">
-                        <label for="checkbox">Согласен с обработкой <a href="#" target="_blank">персональных данных</a></label>
+                </div>
+            </div>
+        </div>
+        <!--Блок"О Компании"-->
+        <div class="about">
+            <div class="container">
+                <div class="about-top">
+                    <div class="about-info">
+                        <h2 class="about-title">О компании</h2>
+                        <p class="about-description">Наша компания является одной из немногих, кто предлагает фитнес услуги онлайн! Оставайтесь с нами и вы сами увидите, что мы проводим не только онлайн-тренировки.</p>
+                        <button class="sign-up">Записаться</button>
+                    </div>
+                    <img class="about-img" src="images/trainer.png" alt="Тренер">
+                </div>
+                <div class="about-bottom">
+                    <div class="about-bottom-item">
+                        <h3>Экономия времени </h3>
+                        <p>Не нужно тратить время на дорогу</p>
+                    </div>
+                    <div class="about-bottom-item">
+                        <h3>Индивидуальный подход</h3>
+                        <p>Внимание тренера пренадлежит только вам</p>
+                    </div>
+                    <div class="about-bottom-item">
+                        <h3>Экономия денег</h3>
+                        <p>Средняя цена одной тренировки - 700₽</p>
+                    </div>
+                    <div class="about-bottom-item">
+                        <h3>Опытный персонал</h3>
+                        <p>Стаж работы у наших тренеров от 5 лет</p>
                     </div>
                 </div>
             </div>
         </div>
     </main>
+    <footer>
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-item">
+                    <a href="#" class="footer-logo"></a>
+                    <nav>
+                        <ul class="footer-nav">
+                            <li><a href="#">Мероприятия</a></li>
+                            <li><a href="#">Расписание</a></li>
+                            <li><a href="#">О компании</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="footer-social">
+                    <a class="footer-mail" href="mailto:info@freefit.com">info@freefit.com</a>
+                    <a href="#" target="_blank" class="footer-instagram"></a>
+                    <a href="#" target="_blank" class="footer-facebook"></a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2020, Все права защищены</p>
+                <p>Сделано в рамках курса учебной платформы <a href="https://annblok.ru/workshop"  target="_blank"">Annblok</a></p>
+            </div>
+        </div>
+    </footer>
+    <script>
+        //Smooth Scroll
+        const links = document.querySelectorAll(".arrow");
+
+        for (const link of links) {
+        link.addEventListener("click", clickHandler);
+        }
+
+        function clickHandler(e) {
+        e.preventDefault();
+        const href = this.getAttribute("href");
+
+        document.querySelector(href).scrollIntoView({
+            behavior: "smooth"
+        });
+        }
+
+        //Button Up
+        window.onscroll = function(){scrollFunction()};
+
+        const upbuttons = document.querySelectorAll(".button-up");
+
+        for (const upbutton of upbuttons) {
+            upbutton.addEventListener("click", clickHandler);
+        }
+
+        function clickHandler(e) {
+        e.preventDefault();
+        const href = this.getAttribute("href");
+
+        document.querySelector(href).scrollIntoView({
+            behavior: "smooth"
+        });
+        }
+
+        function scrollFunction(){
+            if ( document.body.scrollTop > 1000 || document.documentElement.scrollTop > 1000){
+                document.getElementById('btnUp').className = 'button-up visible';
+            } else {
+                document.getElementById('btnUp').className = 'button-up hidden';
+            }
+        }
+
+         // Menu
+
+       function openModal() {
+           document.getElementById("modal").style.top = "0px";
+       }
+
+       function closeModal() {
+           document.getElementById("modal").style.top = "-400px";
+       }
+    </script>
 </body>
 </html>

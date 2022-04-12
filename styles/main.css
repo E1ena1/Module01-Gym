@@ -1,5 +1,6 @@
 body {
     font-family: 'Montserrat', sans-serif;
+    color: #2B3541;
 }
 .container {
     max-width: 1140px;
@@ -49,6 +50,10 @@ body {
     height: 30px;
     background-repeat: no-repeat;
 }
+.header-instagram:hover {
+    transform: scale(1.2);
+    opacity: 1;
+}
 .header-facebook {
     display: block;
     background-image: url(../images/facebook.svg);
@@ -56,6 +61,12 @@ body {
     height: 30px;
     background-repeat: no-repeat;
 }
+.header-facebook:hover {
+    transform: scale(1.2);
+    opacity: 1;
+}
+
+/*Блок с баннером Girl*/
 
 .banner-box {
     position: relative;
@@ -101,16 +112,18 @@ body {
     background-color: #FBF138;
     padding: 22px 30px;
     margin-left: 92px;
+    box-shadow: 0px 13px 24px rgba(251, 241, 56, 0.3);
 }
 .more:hover {
     background-color: #2B3541;
     color: #FBF138;
     transition: 0.3s;
+    box-shadow: 0px 13px 24px rgba(70, 86, 106, 0.2);
 }
 .arrow {
     border: 3px solid #2B3541;
-    width: 52px;
-    height: 53px;
+    width: 50px;
+    height: 50px;
     border-radius: 100%;
     background-image: url(../images/arrow.svg);
     background-repeat: no-repeat;
@@ -118,8 +131,8 @@ body {
     background-color: transparent;
     position: absolute;
     bottom: -259px;
-    left: 0;
-    cursor: pointer;
+    left: -3px;
+  
 }
 .box {
     display: flex;
@@ -212,16 +225,20 @@ body {
     line-height: 125%;
 }
 .events-button {
-    color: #FBF138;
+    color: #2B3541;
     font-size: 16px;
     font-weight: 700;
     text-transform: uppercase;
     line-height: 150%;
     text-decoration: none;
-    background-color: #2B3541;
+    background-color: #FBF138;
     padding: 25px 40px 21px 40px;
     opacity: 0;
     margin-left: 29px;
+}
+.events-button:hover{
+    color: #FBF138;
+    background-color: #2B3541;
 }
 .events-gradient:hover .events-button {
     opacity: 1;
@@ -363,24 +380,76 @@ body {
     background-color: #F3F3F3;
 }
 .form-subscribe {
-    margin-bottom: 100px;
+    margin-top: 159px;
     text-align: center;
+    padding-bottom: 67px;
+    margin-bottom: 160px;
 }
 .form-title {
     font-size: 40px;
     font-weight: 700;
+    color: #2B3541;
+    line-height: 49px;
     position: relative;
+    z-index: 1;
+    padding-top: 80px;
+    margin-bottom: 40px;
 }
 .form-title::before {
     content: ' ';
     width: 53px;
     height: 53px;
     position: absolute;
-    top: -22px;
-    left: 254px;
+    top: 62px;
+    left: 240px;
     background-color: #FBF138;
     border-radius: 100%;
     z-index: -1;
+    box-shadow: 0px 13px 24px rgba(251, 241, 56, 0.3);
+}
+.form-inner {
+    display: flex;
+    justify-content: center;
+}
+.agreement {
+    display: flex;
+    flex-direction: column;
+    margin: 0 0 0 16px;
+    align-items: flex-start;
+}
+.form-subscribe-input {
+    font-size: 18px;
+    color: #2B3541;
+    line-height: 150%;
+    opacity: 0.3;
+    padding: 19px 132px 16px 19px;
+    margin-right: 20px;
+}
+.form-subscribe-btn {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 150%;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: #2B3541;
+    padding: 20px 42px;
+    background-color: #FBF138;
+    border: none;
+    cursor: pointer;
+    height: 65px;
+    display: block;
+    box-shadow: 0px 13px 24px rgba(251, 241, 56, 0.2);
+
+}
+.form-subscribe-btn:hover {
+    background-color: #2B3541;
+    color: #FBF138;
+    transition: 0.3s;
+    box-shadow: 0px 13px 24px rgba(43, 53, 65, 0.2);
+
+}
+.agreement-checkbox {
+    margin-top: 12px;
 }
 .checkbox:checked,
 .checkbox:not(:checked){
@@ -390,7 +459,7 @@ body {
 .checkbox:checked + label,
 .checkbox:not(:checked) + label{
    position: relative;
-   padding-left: 35px;
+   padding-left: 26px;
    cursor:pointer;
 }
 /* Стили для псевдоэлемента before с фоном и обводкой, когда пункт активен */
@@ -449,4 +518,160 @@ body {
 }
 .radio:checked + label::before{
    border-radius: 100%;
+}
+.checkbox-label {
+    color: #2B3541;
+    font-size: 11px;
+}
+.checkbox-label a {
+    color: #2B3541;
+}
+/*Блок"О Компании"*/
+.about {
+    margin-bottom: 151px;
+}
+.about-top {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 63px;
+}
+.about-title {
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 125%;
+    color: #2B3541;
+    margin: 0;
+}
+.about-description {
+    font-size: 18px;
+    line-height: 150%;
+    max-width: 483px;
+    margin-bottom: 37px;
+}
+.sign-up {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 150%;
+    padding: 20px 50px;
+    text-transform: uppercase;
+    background-color: #FBF138;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0px 13px 24px rgba(251, 241, 56, 0.3);
+}
+.sign-up:hover {
+    color: #FBF138;
+    background-color: #2B3541;
+    box-shadow: 0px 13px 24px rgba(43, 53, 65, 0.2);
+    transition: 0.4s;
+}
+.about-img {
+    max-width: 581px;
+}
+.about-bottom {
+    display: flex;
+    gap: 67px;
+}
+.about-bottom-item h3 {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 125%;
+}
+.about-bottom-item p {
+    font-size: 18px;
+    line-height: 150%;
+    opacity: 0.6;
+}
+
+footer {
+    background-color: #F3F3F3;
+}
+.footer-top {
+    padding-top: 50px;
+    padding-bottom: 19px;
+    display: flex;
+    justify-content: space-between;
+}
+.footer-item {
+    display: flex;
+    gap: 74px;
+}
+.footer-logo {
+    display: block;
+    background-image: url(../images/logo.svg);
+    width: 97px;
+    height: 30px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.footer-nav {
+    list-style-type: none;
+    display: flex;
+    gap: 90px;
+    padding-left: 0;
+    margin: 0;
+}
+.footer-nav a {
+    text-decoration: none;
+    color: #2B3541;
+    font-size: 14px;
+    line-height: 150%;
+}
+.footer-social {
+    display: flex;
+    gap: 30px;
+}
+.footer-mail {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 150%;
+    color: #2B3541;
+    text-decoration: none;
+    margin-right: 30px;
+    position: relative;
+    z-index: 1;
+}
+.footer-mail::before{
+    content: '';
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    top: -12px;
+    left: -17px;
+    background-color: #FBF138;
+    border-radius: 100%;
+    z-index: -1;
+    box-shadow: 0px 13px 24px rgba(251, 241, 56, 0.3);
+
+}
+.footer-instagram {
+    display: block;
+    background-image: url(../images/footer-instagram.svg);
+    width: 27px;
+    height: 27px;
+    background-repeat: no-repeat;
+}
+.footer-instagram:hover{
+    transform: scale(1.2);
+    opacity: 1;
+}
+.footer-facebook {
+    display: block;
+    background-image: url(../images/footer-facebook.svg);
+    width: 27px;
+    height: 27px;
+    background-repeat: no-repeat;
+}
+.footer-facebook:hover {
+    transform: scale(1.2);
+    opacity: 1;
+}
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    opacity: 0.3;
+}
+.footer-bottom a {
+    color: #2B3541;
 }
