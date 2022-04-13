@@ -28,7 +28,7 @@
                     <a href="#" class="header-logo"></a>
                     <nav>
                         <ul class="header-nav">
-                            <li><a href="#">Мероприятия</a></li>
+                            <li><a href="#events" class="toevent">Мероприятия</a></li>
                             <li><a href="#">Расписание</a></li>
                             <li><a href="#">О компании</a></li>
                         </ul>
@@ -50,7 +50,7 @@
                     <p class="desc"> &gt; 15&nbsp; тренировок</p>
                     <p class="desc-text">в области спортивной физиологии и нутрициологии</p>
                     <a href="#" class="more">Узнать подробнее</a>
-                    <a href="#events" class="arrow"></a>
+                    <a href="#events" class="arrow toevent"></a>
                 </div>
                 <div class="box">
                     <div class="box-left"></div>
@@ -177,9 +177,13 @@
                     <div class="about-info">
                         <h2 class="about-title">О компании</h2>
                         <p class="about-description">Наша компания является одной из немногих, кто предлагает фитнес услуги онлайн! Оставайтесь с нами и вы сами увидите, что мы проводим не только онлайн-тренировки.</p>
-                        <button class="sign-up">Записаться</button>
+                        <button class="sign-up" onclick="openModal()">Записаться</button>
                     </div>
-                    <img class="about-img" src="images/trainer.png" alt="Тренер">
+                    <div class="about-cover">
+                        <div class="about-img">
+                            <div class="about-gradient"></div>
+                        </div>
+                    </div>
                 </div>
                 <div class="about-bottom">
                     <div class="about-bottom-item">
@@ -202,6 +206,7 @@
             </div>
         </div>
     </main>
+    <!--Футер сайта-->
     <footer>
         <div class="container">
             <div class="footer-top">
@@ -209,7 +214,7 @@
                     <a href="#" class="footer-logo"></a>
                     <nav>
                         <ul class="footer-nav">
-                            <li><a href="#">Мероприятия</a></li>
+                            <li><a href="#events" class="toevent">Мероприятия</a></li>
                             <li><a href="#">Расписание</a></li>
                             <li><a href="#">О компании</a></li>
                         </ul>
@@ -229,7 +234,7 @@
     </footer>
     <script>
         //Smooth Scroll
-        const links = document.querySelectorAll(".arrow");
+        const links = document.querySelectorAll(".toevent");
 
         for (const link of links) {
         link.addEventListener("click", clickHandler);
@@ -273,12 +278,25 @@
          // Menu
 
        function openModal() {
-           document.getElementById("modal").style.top = "0px";
+           document.getElementById("modal").style.top = "120px";
        }
 
        function closeModal() {
-           document.getElementById("modal").style.top = "-400px";
+           document.getElementById("modal").style.top = "-1000px";
        }
     </script>
+    <!--Модальное окно"Заявка на участие""-->
+    <div class="modal" >
+        <div class="modal-content" id="modal">
+            <h2 class="modal-title">Заявка на участие «Марафон выносливости»</h2>
+            <p class="modal-description">Заполните все поля, и мы пришлем информацию в ближайшее время</p>
+            <form action="">
+                <input class="modal-email" type="email" placeholder="Ваш e-mail">
+                <input class="modal-tel" type="tel" placeholder="Ваш номер телефона">
+                <button class="modal-btn" type="submit">Отправить</button>
+            </form>
+            <button class="modal-close" onclick="closeModal()"></button>
+        </div>
+    </div>
 </body>
 </html>
