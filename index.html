@@ -21,11 +21,14 @@
     <meta name="theme-color" content="#ffffff">
 </head>
 <body>
-    <header>
+    <header id="headerTop">
         <div class="container">
             <div class="header">
                 <div class="header-item">
                     <a href="#" class="header-logo"></a>
+                    <div class="header-burger">
+                        <button class="burger" onclick="openModalMenu()"></button>
+                    </div>
                     <nav>
                         <ul class="header-nav">
                             <li><a href="#events" class="toevent">Мероприятия</a></li>
@@ -232,6 +235,38 @@
             </div>
         </div>
     </footer>
+    <a href="#headerTop" class="button-up hidden" id="btnUp">Наверх</a>
+        <!--Модальное окно"Заявка на участие"-->
+        <div class="modal" >
+            <div class="modal-content" id="modal">
+                <h2 class="modal-title">Заявка на участие «Марафон выносливости»</h2>
+                <p class="modal-description">Заполните все поля, и мы пришлем информацию в ближайшее время</p>
+                <form action="">
+                    <input class="modal-email" type="email" placeholder="Ваш e-mail">
+                    <input class="modal-tel" type="tel" placeholder="Ваш номер телефона">
+                    <button class="modal-btn" type="submit">Отправить</button>
+                </form>
+                <button class="modal-close" onclick="closeModal()"></button>
+            </div>
+        </div>
+        <!--Меню в модальном окне-->
+        <div class="modal-menu" id="modalMenu">
+            <div class="modal-menu-item">
+                <a href="#" class="header-logo"></a>
+                <nav>
+                    <ul class="modal-menu-nav">
+                        <li><a href="#events" class="toevent">Мероприятия</a></li>
+                        <li><a href="#">Расписание</a></li>
+                        <li><a href="#">О компании</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="modal-menu-social">
+                <a href="#" target="_blank" class="header-instagram"></a>
+                <a href="#" target="_blank" class="header-facebook"></a>
+            </div>
+            <button class="modal-menu-close" onclick="closeModalMenu()"></button>
+        </div>
     <script>
         //Smooth Scroll
         const links = document.querySelectorAll(".toevent");
@@ -284,19 +319,13 @@
        function closeModal() {
            document.getElementById("modal").style.top = "-1000px";
        }
+       function openModalMenu() {
+           document.getElementById("modalMenu").style.top = "120px";
+       }
+
+       function closeModalMenu() {
+           document.getElementById("modalMenu").style.top = "-9000px";
+       }
     </script>
-    <!--Модальное окно"Заявка на участие""-->
-    <div class="modal" >
-        <div class="modal-content" id="modal">
-            <h2 class="modal-title">Заявка на участие «Марафон выносливости»</h2>
-            <p class="modal-description">Заполните все поля, и мы пришлем информацию в ближайшее время</p>
-            <form action="">
-                <input class="modal-email" type="email" placeholder="Ваш e-mail">
-                <input class="modal-tel" type="tel" placeholder="Ваш номер телефона">
-                <button class="modal-btn" type="submit">Отправить</button>
-            </form>
-            <button class="modal-close" onclick="closeModal()"></button>
-        </div>
-    </div>
 </body>
 </html>

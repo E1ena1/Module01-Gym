@@ -60,6 +60,7 @@ body {
     width: 30px;
     height: 30px;
     background-repeat: no-repeat;
+    background-size: cover;
 }
 .header-instagram:hover {
     transform: scale(1.2);
@@ -71,6 +72,7 @@ body {
     width: 30px;
     height: 30px;
     background-repeat: no-repeat;
+    background-size: cover;
 }
 .header-facebook:hover {
     transform: scale(1.2);
@@ -683,10 +685,11 @@ footer {
 }
 .footer-instagram {
     display: block;
-    background-image: url(../images/footer-instagram.svg);
+    background-image: url(../images/instagram.svg);
     width: 27px;
     height: 27px;
     background-repeat: no-repeat;
+    background-size: cover;
 }
 .footer-instagram:hover{
     transform: scale(1.2);
@@ -694,10 +697,11 @@ footer {
 }
 .footer-facebook {
     display: block;
-    background-image: url(../images/footer-facebook.svg);
+    background-image: url(../images/facebook.svg);
     width: 27px;
     height: 27px;
     background-repeat: no-repeat;
+    background-size: cover;
 }
 .footer-facebook:hover {
     transform: scale(1.2);
@@ -711,6 +715,30 @@ footer {
 }
 .footer-bottom a {
     color: #2B3541;
+}
+
+.button-up {
+    background-color: #FBF138;
+    color: #2B3541;
+    font-weight: 700;
+    font-size: 14px;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 5px 20px;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    transition: .5s;
+}
+.button-up:hover {
+    background-color: #2B3541;
+    color: #FBF138;
+}
+.button-up.hidden {
+    opacity: 0;
+}
+.button-up.visible {
+    opacity: 1;
 }
 
 /*Модальное окно"Заявка на участие"*/
@@ -821,4 +849,195 @@ footer {
     top: 30px;
     right: 30px;
     cursor: pointer;
+}
+
+.burger {
+    width: 29px;
+    height: 22px;
+    background-image: url(../images/burger.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+/*Меню в модальном окне*/
+.modal-menu {
+    max-width: 587px;
+    background-color: #F3F3F3;
+    position: absolute;
+    top: -9000px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    padding-top: 29px;
+    transition: .4s;
+}
+.modal-menu-item {
+    padding-right: 10px;
+}
+.modal-menu .header-logo {
+    width: 78px;
+    height: 24px;
+    background-size: contain;
+    margin: 0 0 40px 10px;
+}
+.modal-menu-nav {
+    padding-left: 10px;
+    list-style-type: none;
+}
+.modal-menu-nav li:nth-child(1) {
+    border-bottom: 1px solid rgb(16.9%, 20.8%, 25.5%, 0.5);
+    padding-bottom: 20px;
+}
+.modal-menu-nav li:nth-child(2) {
+    border-bottom: 1px solid rgb(16.9%, 20.8%, 25.5%, 0.5);
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+.modal-menu-nav li:nth-child(3) {
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+.modal-menu-nav a {
+    font-size: 16px;
+    color: #2B3541;
+    line-height: 150%;
+    text-decoration: none;
+}
+.modal-menu-social {
+    display: flex;
+    gap: 20px;
+    justify-content: flex-end;
+    padding-bottom: 24px;
+    padding-right: 12px;
+}
+.modal-menu .header-instagram {
+    width: 26px;
+    height: 26px;
+    background-image: url(../images/instagram.svg);
+}
+.modal-menu .header-facebook {
+    width: 26px;
+    height: 26px;
+    background-image: url(../images/facebook.svg);
+}
+.modal-menu-close {
+    width: 20px;
+    height: 19px;
+    background-image: url(../images/close.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    border: none;
+    position: absolute;
+    top: 34px;
+    right: 11px;
+    cursor: pointer;
+}
+/* Responsive*/
+
+@media (min-width:766px) {
+    .header-burger {
+        display: none;
+    }
+}
+
+@media (max-width:1510px) {
+    .header-logo {
+        width: 85px;
+        background-size: contain;
+    }
+    .header-item {
+        gap: 50px;
+    }
+    .header-nav a {
+        font-size: 16px;
+    }
+    .text {
+        display: flex;
+        flex-direction: column;
+    }
+    .title {
+        margin-top: 51px;
+        font-size: 2vw;
+    }
+    .desc {
+        font-size: 30px;
+    }
+    .desc-text {
+        font-size: 16px;
+        margin-left: 0;
+    }
+    .more {
+        font-size: 16px;
+        padding: 14px 41px 14px 47px;
+        margin-left: 0; 
+    }
+    .arrow {
+        width: 39px;
+        height: 39px;
+        left: 0px;
+        bottom: 7px;
+    }
+    .banner {
+        overflow: hidden;
+    }
+    .banner-box {
+        margin-bottom: 0;
+    }
+    .box {
+        display: flex;
+        gap: 13px;
+        height: 50vw;
+        max-width: 1000px;
+        margin: 0 auto;
+        position: relative;
+     }
+     .box-left {
+        height: 100%;
+        flex-basis: 64%;
+     }
+     .box-right {
+        flex-basis: 24%;
+        height: 100%;
+     }
+     .box img {
+        width: auto;
+        height: 100%;
+        margin: 0 auto;
+        position: absolute;
+        left: -128px;
+        right: 0;
+        object-fit: cover;
+     }
+     .events-title {
+        font-size: 29px;
+    }
+    .events-gradient {
+        height: 504px;
+    }
+    .date {
+        font-size: 15px;
+    }
+    .events-h3 {
+        font-size: 18px;
+    }
+    .form-title::before {
+    }
+}
+@media (max-width: 1000px) {
+    .footer-item {
+        gap: 26px;
+    }
+    .footer-nav {
+        gap: 36px;
+    }
+    .button-up.visible {
+        display: none;
+    }
+}
+
+@media (max-width: 765px) {
+  
 }
