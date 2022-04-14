@@ -47,7 +47,7 @@ body {
     opacity: 0;
     display: block;
 }
-.header-nav a::after:hover{
+.header-nav a:hover::after{
     opacity: 1;
 }
 .header-social {
@@ -642,6 +642,17 @@ footer {
     color: #2B3541;
     font-size: 14px;
     line-height: 150%;
+}
+.footer-nav a::after {
+    content: "";
+    width: 100%;
+    height: 1px;
+    background: #2B3541;
+    opacity: 0;
+    display: block;
+}
+.footer-nav a:hover::after{
+    opacity: 1;
 }
 .footer-social {
     display: flex;
