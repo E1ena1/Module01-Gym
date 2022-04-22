@@ -222,6 +222,11 @@
                         <p>Стаж работы у наших тренеров от 5 лет</p>
                     </div>
                     <button class="about-bottom-sign-up" onclick="openModal()">Записаться</button>
+                    <div class="about-cover-bottom">
+                        <div class="about-img-bottom">
+                            <div class="about-gradient-bottom"></div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -267,23 +272,26 @@
             </div>
         </div>
         <!--Меню в модальном окне-->
-        <div class="modal-menu" id="modalMenu">
-            <div class="modal-menu-item">
-                <a href="#" class="header-logo"></a>
-                <nav>
-                    <ul class="modal-menu-nav">
-                        <li><a href="#events" class="toevent">Мероприятия</a></li>
-                        <li><a href="#">Расписание</a></li>
-                        <li><a href="#">О компании</a></li>
-                    </ul>
-                </nav>
+        <div class="modal-menu-above" >
+            <div class="modal-menu" id="modalMenu">
+                <div class="modal-menu-item">
+                    <a href="#" class="header-logo"></a>
+                    <nav>
+                        <ul class="modal-menu-nav">
+                            <li><a href="#events" class="toevent">Мероприятия</a></li>
+                            <li><a href="#">Расписание</a></li>
+                            <li><a href="#">О компании</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="modal-menu-social">
+                    <a href="#" target="_blank" class="header-instagram"></a>
+                    <a href="#" target="_blank" class="header-facebook"></a>
+                </div>
+                <button class="modal-menu-close" onclick="closeModalMenu()"></button>
             </div>
-            <div class="modal-menu-social">
-                <a href="#" target="_blank" class="header-instagram"></a>
-                <a href="#" target="_blank" class="header-facebook"></a>
-            </div>
-            <button class="modal-menu-close" onclick="closeModalMenu()"></button>
         </div>
+        
     <script>
         //Smooth Scroll
         const links = document.querySelectorAll(".toevent");
