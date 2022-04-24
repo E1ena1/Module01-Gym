@@ -257,10 +257,11 @@
             </div>
         </div>
     </footer>
+    <!--Кнопка "Наверх"-->
     <a href="#headerTop" class="button-up hidden" id="btnUp">Наверх</a>
         <!--Модальное окно"Заявка на участие"-->
-        <div class="modal" >
-            <div class="modal-content" id="modal">
+        <div class="modal" id="modal">
+            <div class="modal-content">
                 <h2 class="modal-title">Заявка на участие «Марафон выносливости»</h2>
                 <p class="modal-description">Заполните все поля, и мы пришлем информацию в ближайшее время</p>
                 <form action="">
@@ -272,13 +273,13 @@
             </div>
         </div>
         <!--Меню в модальном окне-->
-        <div class="modal-menu-above" >
-            <div class="modal-menu" id="modalMenu">
+        <div class="modal-menu-above"  id="modalMenu">
+            <div class="modal-menu">
                 <div class="modal-menu-item">
                     <a href="#" class="header-logo"></a>
                     <nav>
                         <ul class="modal-menu-nav">
-                            <li><a href="#events" class="toevent">Мероприятия</a></li>
+                            <li><a href="#events" class="toevent" onclick="closeModalMenu()">Мероприятия</a></li>
                             <li><a href="#">Расписание</a></li>
                             <li><a href="#">О компании</a></li>
                         </ul>
@@ -291,7 +292,6 @@
                 <button class="modal-menu-close" onclick="closeModalMenu()"></button>
             </div>
         </div>
-        
     <script>
         //Smooth Scroll
         const links = document.querySelectorAll(".toevent");
@@ -338,11 +338,11 @@
          // Menu
 
        function openModal() {
-           document.getElementById("modal").style.top = "120px";
+           document.getElementById("modal").style.top = "0px";
        }
 
        function closeModal() {
-           document.getElementById("modal").style.top = "-1000px";
+           document.getElementById("modal").style.top = "-9000px";
        }
        function openModalMenu() {
            document.getElementById("modalMenu").style.top = "0px";

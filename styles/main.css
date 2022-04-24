@@ -720,6 +720,7 @@ footer {
     color: #2B3541;
 }
 
+/*Кнопка "Наверх"*/
 .button-up {
     background-color: #FBF138;
     color: #2B3541;
@@ -746,13 +747,23 @@ footer {
 
 /*Модальное окно"Заявка на участие"*/
 
+.modal {
+    position: fixed;
+    top: 9000px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index:500;
+    overflow:hidden;
+}
 .modal-content {
     max-width: 600px;
     background-color: #F3F3F3;
     padding: 60px 0 80px;
     text-align: center;
-    position: fixed;
-    top: -1000px;
+    position: relative;
+    top: 120px;
     left: 0;
     right: 0;
     margin: 0 auto;
@@ -780,7 +791,6 @@ footer {
     border-radius: 100%;
     z-index: -1;
     box-shadow: 0px 13px 24px rgba(251, 241, 56, 0.3);
-
 }
 .modal-description {
     font-size: 18px;
@@ -796,6 +806,9 @@ footer {
     border: none;
     margin-bottom: 20px;
 }
+.modal-email::placeholder {
+    opacity: 0.3;
+}
 .modal-tel {
     font-size: 18px;
     line-height: 150%;
@@ -803,6 +816,9 @@ footer {
     background-color: #ffffff;
     border: none;
     margin-bottom: 41px;
+}
+.modal-tel::placeholder {
+    opacity: 0.3;
 }
 .modal-email:hover,
 .modal-tel:hover {
@@ -853,7 +869,6 @@ footer {
     right: 30px;
     cursor: pointer;
 }
-
 .burger {
     width: 29px;
     height: 22px;
@@ -866,20 +881,21 @@ footer {
 }
 
 /*Меню в модальном окне*/
-/*.modal-menu-above {
-    position: absolute;
+.modal-menu-above {
+    position: fixed;
+    top: 9000px;
+    left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    top: 0;
-    left: 0;
-    right: 0;
-}*/
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index:500;
+    overflow:scroll;
+}
 .modal-menu {
     max-width: 587px;
     background-color: #F3F3F3;
     position: absolute;
-    top: -9000px;
+    top: 0;
     left: 0;
     right: 0;
     margin: 0 auto;
@@ -947,8 +963,6 @@ footer {
     right: 28px;
     cursor: pointer;
 }
-
-
 
 /* Responsive*/
 @media (min-width:568px) {
@@ -1642,7 +1656,26 @@ footer {
         flex-direction: column;
         align-items: center;
     }
+    .modal-email {
+        font-size: 18px;
+        line-height: 150%;
+        padding: 21px 154px 18px 24px;
+    }
+    .modal-tel {
+        font-size: 18px;
+        line-height: 150%;
+        padding: 19px 150px 18px 27px;
+    }
+    .modal-btn {
+        font-size: 16px;
+        font-weight: 700;
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
+        background-color: #FBF138;
+        padding: 23px 142px;
+    }
 }
+
 @media (max-width:370px) {
     .title {
         font-size: 21px;
@@ -1652,5 +1685,43 @@ footer {
     }
     .about-bottom-sign-up {
         padding: 19px 102px;
+    }
+    .modal-content {
+        padding: 50px 0 40px;
+    }
+    .modal-title {
+        font-size: 16px;
+        max-width: 251px;
+    }
+    .modal-title::before {
+        content: '';
+        width: 31px;
+        height: 31px;
+        position: absolute;
+        top: -21px;
+        left: 29px;
+    }
+    .modal-description {
+        font-size: 16px;
+        max-width: 257px;
+        margin: 18px auto 25px;
+    }
+    .modal-email {
+        font-size: 18px;
+        line-height: 150%;
+        padding: 21px 95px 18px 24px;
+    }
+    .modal-tel {
+        font-size: 18px;
+        line-height: 150%;
+        padding: 19px 92px 18px 27px;
+    }
+    .modal-btn {
+        font-size: 16px;
+        font-weight: 700;
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
+        background-color: #FBF138;
+        padding: 23px 115px;
     }
 }
