@@ -1033,9 +1033,6 @@ footer {
         width: 39px;
         height: 39px;
     }
-   /* .banner {
-        overflow: hidden;
-    }*/
     .banner-box {
         margin-bottom: 0;
     }
@@ -1488,6 +1485,10 @@ footer {
         bottom: 2px;
         object-fit: cover;
     }
+    .footer-bottom p {
+        font-size: 10px;
+        color: rgba(43,53,65, .3);
+    }
 }
 
 @media (max-width:567px) {
@@ -1700,10 +1701,6 @@ footer {
     .footer-bottom {
         flex-direction: column;
         align-items: center;
-    }
-    .footer-bottom p {
-        font-size: 10px;
-        color: rgba(43,53,65, .3);
     }
     .modal-email {
         font-size: 18px;
