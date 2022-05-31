@@ -286,8 +286,8 @@ body {
 /*Блок "Расписание тренировок"*/
 
 .timetable {
-    margin-top: 158px;
-    margin-bottom: 150px;
+    margin-top: 161px;
+    margin-bottom: 163px;
 }
 .timetable-header {
     display: flex;
@@ -408,10 +408,11 @@ body {
     background-color: #F3F3F3;
 }
 .form-subscribe {
-    margin-top: 159px;
     text-align: center;
+    padding-top: 50px;
     padding-bottom: 67px;
-    margin-bottom: 160px;
+    margin-top: 159px;
+    margin-bottom: 164px;
 }
 .form-title {
     font-size: 40px;
@@ -420,7 +421,6 @@ body {
     line-height: 49px;
     position: relative;
     z-index: 1;
-    padding-top: 80px;
     margin-bottom: 40px;
 }
 .form-title::before {
@@ -428,8 +428,8 @@ body {
     width: 53px;
     height: 53px;
     position: absolute;
-    top: 62px;
-    left: 240px;
+    top: -18px;
+    left: 243px;
     background-color: #FBF138;
     border-radius: 100%;
     z-index: -1;
@@ -1378,7 +1378,7 @@ footer {
         max-width: 201px;
         line-height: 33px;
         margin: 0 auto 50px;
-        padding-top: 54px;
+
     }
     .form-title::before {
         content: ' ';
@@ -1390,6 +1390,7 @@ footer {
     }
     .form-subscribe {
         margin-top: 96px;
+        padding-top: 54px;
     }
     .form-subscribe-input {
         padding: 19px 93px 16px 24px;
