@@ -38,17 +38,20 @@ body {
     color: #2B3541;
     font-size: 18px;
     line-height: 150%;
+    transition-timing-function: ease-out;
 }
 .header-nav a::after {
     content: "";
-    width: 100%;
+    width: 1%;
     height: 1px;
     background: #2B3541;
     opacity: 0;
     display: block;
+    transition: .3s;
 }
 .header-nav a:hover::after{
     opacity: 1;
+    width: 100%;
 }
 .header-social {
     display: flex;
@@ -61,6 +64,7 @@ body {
     height: 30px;
     background-repeat: no-repeat;
     background-size: cover;
+    transition: .3s;
 }
 .header-instagram:hover {
     transform: scale(1.2);
@@ -73,6 +77,7 @@ body {
     height: 30px;
     background-repeat: no-repeat;
     background-size: cover;
+    transition: .3s;
 }
 .header-facebook:hover {
     transform: scale(1.2);
