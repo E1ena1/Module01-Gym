@@ -82,6 +82,10 @@ body {
 
 /*Блок с баннером Girl*/
 
+.banner {
+    overflow: hidden;
+}
+
 .banner-box {
     position: relative;
     display: flex;
@@ -89,9 +93,10 @@ body {
 }
 .text {
     position: relative;
+    margin-top: 195px;
 }
 .title {
-    margin-top: 228px;
+    /*margin-top: 228px;*/
     font-size: 48px;
     font-weight: 700;
     letter-spacing: 0.03em;
@@ -106,12 +111,15 @@ body {
     color: #2B3541;
     margin-bottom: 24px;
 }
+.desc-box {
+    margin-left: 92px;
+}
 .desc-text {
     font-size: 18px;
     line-height: 150%;
     color: #2B3541;
     max-width: 297px;
-    margin-left: 92px;
+    /*margin-left: 92px;*/
     margin-bottom: 54px;
 }
 .more {
@@ -125,7 +133,7 @@ body {
     border: none;
     background-color: #FBF138;
     padding: 22px 30px;
-    margin-left: 92px;
+    /*margin-left: 92px;*/
     box-shadow: 0 13px 24px rgba(251, 241, 56, 0.3);
     transition: 0.4s;
 }
@@ -377,12 +385,12 @@ body {
 }
 .timetable .active {
     background: linear-gradient(180deg, #FBF138 0%, rgba(253, 249, 182, 0.45) 100%);
-    opacity: 0.7;
-    box-shadow: 0px 13px 30px rgba(186, 180, 69, 0.2);
+    box-shadow: 0 13px 30px rgba(186, 180, 69, 0.2);
     border: none;
+    transition: .4s;
 }
 .timetable .active:hover {
-    opacity: 0.8;
+    background: linear-gradient(180deg, #FBF138 0%, rgba(253, 249, 182, 1) 50%);
 }
 .timetable-description {
     font-size: 18px;
@@ -965,11 +973,13 @@ footer {
     width: 26px;
     height: 26px;
     background-image: url(../images/instagram.svg);
+    transition: .4s;
 }
 .modal-menu .header-facebook {
     width: 26px;
     height: 26px;
     background-image: url(../images/facebook.svg);
+    transition: .4s;
 }
 .modal-menu-close {
     width: 20px;
@@ -1017,26 +1027,28 @@ footer {
     .text {
         display: flex;
         flex-direction: column;
+        margin-top: 8px;
     }
     .title {
-        margin-top: 51px;
+        /*margin-top: 51px;*/
         font-size: 26px;
     }
     .desc {
         font-size: 30px;
     }
+    .desc-box {
+        margin-left: 0;
+    }
     .desc-text {
         font-size: 16px;
-        margin-left: 0;
+        /*margin-left: 0;*/
         max-width: 255px;
         margin-bottom: 41px;
     }
     .more {
         font-size: 16px;
-        padding: 20px 0px 20px 0px;
         text-align: center;
         max-width: 252px;
-        margin-left: 0; 
     }
     .arrow {
         width: 39px;
@@ -1250,7 +1262,7 @@ footer {
         max-width: 100%;
     }
     .title {
-        margin-top: 26px;
+        /*margin-top: 26px;*/
         margin-bottom: 18px;
     }
     .desc {
@@ -1779,5 +1791,14 @@ footer {
         text-transform: uppercase;
         background-color: #FBF138;
         padding: 23px 115px;
+    }
+}
+
+@media (max-width:360px) {
+    .form-subscribe-input {
+        padding: 19px 24px 16px 24px;
+        width: 100%;
+        box-sizing: border-box;
+        margin-right: 0;
     }
 }
