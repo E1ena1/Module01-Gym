@@ -47,7 +47,7 @@ body {
     background: #2B3541;
     opacity: 0;
     display: block;
-    transition: .3s;
+    transition: .4s;
 }
 .header-nav a:hover::after{
     opacity: 1;
@@ -57,27 +57,23 @@ body {
     display: flex;
     gap: 30px;
 }
-.header-instagram {
+.header-social-link {
     display: block;
-    background-image: url(../images/instagram.svg);
     width: 30px;
     height: 30px;
     background-repeat: no-repeat;
     background-size: cover;
-    transition: .3s;
+    transition: .4s;
+}
+.header-instagram {
+    background-image: url(../images/instagram.svg);
 }
 .header-instagram:hover {
     transform: scale(1.2);
     opacity: 1;
 }
 .header-facebook {
-    display: block;
     background-image: url(../images/facebook.svg);
-    width: 30px;
-    height: 30px;
-    background-repeat: no-repeat;
-    background-size: cover;
-    transition: .3s;
 }
 .header-facebook:hover {
     transform: scale(1.2);
@@ -131,11 +127,11 @@ body {
     padding: 22px 30px;
     margin-left: 92px;
     box-shadow: 0 13px 24px rgba(251, 241, 56, 0.3);
+    transition: 0.4s;
 }
 .more:hover {
     background-color: #2B3541;
     color: #FBF138;
-    transition: 0.3s;
     box-shadow: 0 13px 24px rgba(70, 86, 106, 0.2);
 }
 .arrow {
@@ -197,6 +193,7 @@ body {
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
 }
+
 .events-item-1 {
     background-image: url(../images/maraphon.png);
     background-repeat: no-repeat;
@@ -217,6 +214,7 @@ body {
     height: 600px;
     background: linear-gradient(180deg, rgba(251, 241, 56, .3) 0%, rgba(253, 249, 182, 0) 100%);
     position: relative;
+    transition: 0.4s;
 }
 .events-gradient:hover {
     background: linear-gradient(180deg, rgba(251, 241, 56, .6) 0%, rgba(253, 249, 182, 0) 100%);
@@ -350,13 +348,14 @@ body {
     font-size: 18px;
     line-height: 125%;
     color: #010101;
-    opacity: 0.7;
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    /*opacity: 0.7;*/
+    text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
     margin: 0;
 }
 .timetable-name {
     position: absolute;
     bottom: -80px;
+    transition: .4s;
 }
 .timetable-grid-item:hover .timetable-name {
     bottom: 10px;
@@ -472,8 +471,8 @@ body {
 .form-subscribe-btn:hover {
     background-color: #2B3541;
     color: #FBF138;
-    transition: 0.3s;
-    box-shadow: 0px 13px 24px rgba(43, 53, 65, 0.2);
+    transition: 0.4s;
+    box-shadow: 0 13px 24px rgba(43, 53, 65, 0.2);
 
 }
 .agreement-checkbox {
@@ -588,13 +587,13 @@ body {
     background-color: #FBF138;
     border: none;
     cursor: pointer;
-    box-shadow: 0px 13px 24px rgba(251, 241, 56, 0.3);
+    box-shadow: 0 13px 24px rgba(251, 241, 56, 0.3);
+    transition: .4s;
 }
 .sign-up:hover {
     color: #FBF138;
     background-color: #2B3541;
-    box-shadow: 0px 13px 24px rgba(43, 53, 65, 0.2);
-    transition: 0.4s;
+    box-shadow: 0 13px 24px rgba(43, 53, 65, 0.2);
 }
 .about-cover {
     height: 335px;
@@ -665,14 +664,16 @@ footer {
 }
 .footer-nav a::after {
     content: "";
-    width: 100%;
+    width: 1%;
     height: 1px;
     background: #2B3541;
     opacity: 0;
     display: block;
+    transition: .4s;
 }
 .footer-nav a:hover::after{
     opacity: 1;
+    width: 100%;
 }
 .footer-social {
     display: flex;
@@ -735,6 +736,7 @@ footer {
 }
 .footer-bottom a {
     color: rgba(43,53,65, .3);
+    transition: .4s;
 }
 .footer-bottom a:hover {
     color: rgba(43,53,65, 1.3);
@@ -752,7 +754,7 @@ footer {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    transition: .5s;
+    transition: .4s;
 }
 .button-up:hover {
     background-color: #2B3541;
@@ -787,7 +789,7 @@ footer {
     left: 0;
     right: 0;
     margin: 0 auto;
-    transition: .5s;
+    transition: .4s;
     box-shadow: 0 13px 24px rgba(43, 53, 65, 0.6);
     z-index: 5;
 }
@@ -1637,12 +1639,12 @@ footer {
         background-color: #FBF138;
         border: none;
         cursor: pointer;
-        box-shadow: 0px 13px 24px rgba(251, 241, 56, 0.3);
+        box-shadow: 0 13px 24px rgba(251, 241, 56, 0.3);
     }
     .about-bottom-sign-up:hover {
         color: #FBF138;
         background-color: #2B3541;
-        box-shadow: 0px 13px 24px rgba(43, 53, 65, 0.2);
+        box-shadow: 0 13px 24px rgba(43, 53, 65, 0.2);
         transition: 0.4s;
     }
     .about-top {
