@@ -450,9 +450,11 @@ body {
     color: #2B3541;
     line-height: 150%;
     opacity: 0.3;
-    padding: 19px 132px 16px 19px;
+    padding: 19px 17px 19px 11px;
     margin-right: 20px;
     border: none;
+    width: 347px;
+
 }
 .form-subscribe-input:focus {
     outline: 1px solid #FBF138;
@@ -719,6 +721,7 @@ footer {
     height: 27px;
     background-repeat: no-repeat;
     background-size: cover;
+    transition: .4s;
 }
 .footer-instagram:hover{
     transform: scale(1.2);
@@ -731,6 +734,7 @@ footer {
     height: 27px;
     background-repeat: no-repeat;
     background-size: cover;
+    transition: .4s;
 }
 .footer-facebook:hover {
     transform: scale(1.2);
