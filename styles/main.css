@@ -1545,6 +1545,7 @@ footer {
         color: rgba(43,53,65, .3);
     }
 }
+
 @media (max-width:685px) {
     .title {
         letter-spacing: 0;
@@ -1840,5 +1841,8 @@ footer {
         width: 100%;
         box-sizing: border-box;
         margin-right: 0;
+    }
+    .more {
+        padding: 20px 52px 25px 52px;
     }
 }
