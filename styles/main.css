@@ -1101,6 +1101,15 @@ footer {
     .arrow {
         margin-top: 125px;
     }
+    .form-title::before {
+        left: 235px;
+    }
+}
+
+@media (max-width: 1100px) {
+    .form-title::before {
+        left: 195px;
+    }
 }
 
 @media (max-width: 1012px) {
@@ -1144,6 +1153,9 @@ footer {
         position: absolute;
         bottom: -60px;
     }
+    .form-title::before {
+        left: 162px;
+    }
 }
 
 @media (max-width: 1000px) {
@@ -1158,6 +1170,15 @@ footer {
     }
     .button-up.visible {
         display: none;
+    }
+    .form-title::before {
+        left: 145px;
+    }
+}
+
+@media (max-width: 950px) {
+    .form-title::before {
+        left: 117px;
     }
 }
 
@@ -1224,6 +1245,9 @@ footer {
     .timetable-name img {
         margin-bottom: 33px;
     }
+    .form-title::before {
+        left: 80px;
+    }
 }
 
 @media (max-width: 812px) {
@@ -1274,13 +1298,16 @@ footer {
         line-height: 32px;
         margin-bottom: 0;
     }
+    .desc-text {
+        margin-bottom: 64px;
+    }
     .desc span {
         padding-left: 5px;
     }
     .arrow {
-        width: 34px;
-        height: 34px;
-        margin-top: 46px;
+        width: 32px;
+        height: 32px;
+        margin-top: 68px;
     }
     .box {
         height: 53vw;
@@ -1389,25 +1416,25 @@ footer {
         width: 31px;
         height: 31px;
         position: absolute;
-        top: 43px;
-        left: -12px;
-    }
-    .form-subscribe {
-        margin-top: 96px;
-        padding-top: 54px;
+        top: -13px;
+        left: -14px;
     }
     .form-subscribe-input {
-        padding: 19px 93px 16px 24px;
+        padding: 18px 20px 22px 26px;
+        width: 340px;
+        box-sizing: border-box;
     }
     .agreement {
-        margin: 0 0 27px 0;
+        margin: 0 0 25px 0;
     }
     .form-subscribe-btn {
         padding: 20px 42px 20px 26px;
         transition: .4s;
     }
     .form-subscribe {
+        padding-top: 60px;
         padding-bottom: 41px;
+        margin-top: 96px;
         margin-bottom: 94px;
     }
     .about {
@@ -1523,7 +1550,7 @@ footer {
         margin-top: 46px;
     }
     .desc-text {
-        margin-bottom: 40px;
+        margin-bottom: 60px;
     }
     .container {
         max-width: 340px;
@@ -1533,10 +1560,10 @@ footer {
     }
     .title {
         font-size: 26px;
-        letter-spacing: 0;
+        letter-spacing: 0.6px;
     }
     .more {
-        padding: 20px 43px 20px 46px;
+        padding: 20px 70px 25px 77px;
     }
     .arrow {
         display: none;
@@ -1546,10 +1573,10 @@ footer {
     }
     .box {
         height: 96vw;
-        max-height: 310px;
+        max-height: 314px;
         right: 0;
         left: 0;
-        margin-top: 40px;
+        margin-top: 59px;
     }
     .box-left {
         flex-basis: 60%;
@@ -1640,6 +1667,7 @@ footer {
     .form-subscribe {
         margin-top: 73px;
         margin-bottom: 81px;
+        padding-top: 54px;
     }
     .about {
         margin-bottom: 38px;
