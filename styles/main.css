@@ -1382,7 +1382,7 @@ footer {
     }
     .events-h3 {
         max-width: 203px;
-        margin: 12px 20px 60px 27px;
+        margin: 12px 20px 60px 23px;
         line-height: 115%;
     }
     .events-button {
@@ -1522,12 +1522,13 @@ footer {
 @media (max-width: 740px) {
     .title {
         margin-bottom: 0px;
+        font-size: 24px;
     }
     .desc-text {
-        margin-bottom: 13px;
+        margin-bottom: 43px;
     }
     .arrow {
-        margin-top: 20px;
+        margin-top: 50px;
     }
     .box img {
         width: auto;
@@ -1542,6 +1543,12 @@ footer {
     .footer-bottom p {
         font-size: 10px;
         color: rgba(43,53,65, .3);
+    }
+}
+@media (max-width:685px) {
+    .title {
+        letter-spacing: 0;
+        font-size: 20px;
     }
 }
 
