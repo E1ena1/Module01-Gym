@@ -1792,6 +1792,9 @@ footer {
     .box {
         height: 80vw;
     }
+    .more {
+        padding: 20px 60px 25px 60px;
+    }
     .about-bottom-sign-up {
         padding: 19px 102px;
     }
