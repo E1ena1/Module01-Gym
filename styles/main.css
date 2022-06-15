@@ -318,7 +318,7 @@ body {
 }
 .timetable-grid-item {
     border: 1px solid rgba(43, 53, 65, 0.5);
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    /*filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));*/
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -326,6 +326,11 @@ body {
     position: relative;
     overflow: hidden;
     cursor: pointer;
+    transition: .3s;
+}
+.timetable-grid-item:hover {
+    border: 1px solid #ffffff;
+    box-shadow: 0 4px 30px rgba(43, 53, 65, 0.2);
 }
 .timetable-grid-item:nth-child(1) {
     grid-column: 1 / 2;
@@ -1153,6 +1158,9 @@ footer {
         position: absolute;
         bottom: -60px;
     }
+    .timetable-name img {
+        margin-bottom: 23px;
+    }
     .form-title::before {
         left: 162px;
     }
@@ -1550,6 +1558,12 @@ footer {
     .title {
         letter-spacing: 0;
         font-size: 20px;
+    }
+}
+
+@media (max-width:610px) {
+    .timetable-name {
+        bottom: -53px;
     }
 }
 
