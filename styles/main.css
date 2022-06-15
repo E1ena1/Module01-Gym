@@ -1567,6 +1567,12 @@ footer {
     }
 }
 
+@media (max-width:610px) {
+    .timetable-name {
+        bottom: -53px;
+    }
+}
+
 @media (max-width:567px) {
     .desc {
         margin-top: 46px;
