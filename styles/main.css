@@ -396,6 +396,7 @@ body {
 }
 .timetable .active:hover {
     background: linear-gradient(180deg, #FBF138 0%, rgba(253, 249, 182, 1) 50%);
+    height: auto;
 }
 .timetable-description {
     font-size: 18px;
@@ -1716,6 +1717,21 @@ footer {
     }
     .timetable-grid-item {
         padding: 20px 14px;
+    }
+    .timetable-grid-item:hover {
+        height: 80px;
+    }
+    .timetable-grid-item:hover .timetable-name{
+        bottom: -17px;
+    }
+    .timetable .active:hover .timetable-name {
+        bottom: 10px;
+    }
+    .timetable-grid-item:hover .timetable-name h3 {
+        margin-bottom: 4px;
+    }
+    .timetable .active:hover .timetable-name h3 {
+        margin-bottom: 30px;
     }
     .timetable-name img {
         margin-bottom: 58px;
