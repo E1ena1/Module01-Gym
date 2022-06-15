@@ -102,7 +102,7 @@
             </div>
         </div>
          <!--Блок "Расписание тренировок"-->
-        <div class="timetable">
+        <div id="timetable" class="timetable">
             <div class="container">
                 <div class="timetable-header">
                     <h1 class="timetable-title">Расписание тренировок</h1>
@@ -180,7 +180,7 @@
                     <h1 class="form-title">Подпишитесь на рассылку</h1>
                     <form class="form-inner">
                         <div class="agreement">
-                            <input class="form-subscribe-input" type="email" placeholder="Ваш e-mail">
+                            <input class="form-subscribe-input" type="email" title="Например, some@mail.ru" placeholder="Ваш e-mail">
                             <p class="agreement-checkbox">
                                 <input type="checkbox" id="checkbox" class="checkbox">
                                 <label class="checkbox-label" for="checkbox">Согласен с обработкой <a href="#" target="_blank">персональных данных</a></label>
@@ -192,7 +192,7 @@
             </div>
         </div>
         <!--Блок"О Компании"-->
-        <div class="about">
+        <div id="about" class="about">
             <div class="container">
                 <div class="about-top">
                     <div class="about-info">
@@ -282,8 +282,8 @@
                     <nav>
                         <ul class="modal-menu-nav">
                             <li><a href="#events" class="toevent" onclick="closeModalMenu()">Мероприятия</a></li>
-                            <li><a href="#">Расписание</a></li>
-                            <li><a href="#">О компании</a></li>
+                            <li><a href="#timetable" onclick="closeModalMenu()">Расписание</a></li>
+                            <li><a href="#about" onclick="closeModalMenu()">О компании</a></li>
                         </ul>
                     </nav>
                 </div>
