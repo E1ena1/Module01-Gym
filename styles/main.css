@@ -584,6 +584,7 @@ body {
     display: flex;
     justify-content: space-between;
     margin-bottom: 63px;
+    gap: 10px;
 }
 .about-title {
     font-size: 40px;
@@ -605,6 +606,7 @@ body {
     padding: 20px 50px;
     text-transform: uppercase;
     background-color: #FBF138;
+    color: #2B3541;
     border: none;
     cursor: pointer;
     box-shadow: 0 13px 24px rgba(251, 241, 56, 0.3);
@@ -929,6 +931,7 @@ footer {
     letter-spacing: 0.03em;
     text-transform: uppercase;
     background-color: #FBF138;
+    color: #2B3541;
     padding: 23px 5px 23px 5px;
     width: 100%;
     box-sizing: border-box;
@@ -948,6 +951,7 @@ footer {
     background-image: url(../images/close.svg);
     background-repeat: no-repeat;
     background-size: contain;
+    background-color: inherit;
     border: none;
     position: absolute;
     top: 30px;
@@ -984,7 +988,7 @@ footer {
     left: 0;
     right: 0;
     margin: 0 auto;
-    padding: 29px 27px 24px 10px;
+    padding: 29px 27px 24px 27px;
     transition: .4s;
 }
 .modal-menu-item {
@@ -1028,12 +1032,14 @@ footer {
     width: 26px;
     height: 26px;
     background-image: url(../images/instagram.svg);
+    background-repeat: no-repeat;
     transition: .4s;
 }
 .modal-menu .header-facebook {
     width: 26px;
     height: 26px;
     background-image: url(../images/facebook.svg);
+    background-repeat: no-repeat;
     transition: .4s;
 }
 .modal-menu-close {
@@ -1041,6 +1047,7 @@ footer {
     height: 19px;
     background-image: url(../images/close.svg);
     background-repeat: no-repeat;
+    background-color: inherit;
     background-size: contain;
     border: none;
     position: absolute;
@@ -1210,6 +1217,9 @@ footer {
     }
     .form-title::before {
         left: 162px;
+    }
+    .about-bottom {
+        gap: 30px;
     }
 }
 
