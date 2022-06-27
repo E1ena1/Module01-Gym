@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -102,7 +102,7 @@
             </div>
         </div>
          <!--Блок "Расписание тренировок"-->
-        <div class="timetable">
+        <div id="timetable" class="timetable">
             <div class="container">
                 <div class="timetable-header">
                     <h1 class="timetable-title">Расписание тренировок</h1>
@@ -178,9 +178,9 @@
             <div class="container">
                 <div class="form-subscribe">
                     <h1 class="form-title">Подпишитесь на рассылку</h1>
-                    <form class="form-inner" action="" >
+                    <form class="form-inner">
                         <div class="agreement">
-                            <input class="form-subscribe-input" type="email" placeholder="Ваш e-mail">
+                            <input class="form-subscribe-input" type="email" title="Например, some@mail.ru" placeholder="Ваш e-mail">
                             <p class="agreement-checkbox">
                                 <input type="checkbox" id="checkbox" class="checkbox">
                                 <label class="checkbox-label" for="checkbox">Согласен с обработкой <a href="#" target="_blank">персональных данных</a></label>
@@ -192,7 +192,7 @@
             </div>
         </div>
         <!--Блок"О Компании"-->
-        <div class="about">
+        <div id="about" class="about">
             <div class="container">
                 <div class="about-top">
                     <div class="about-info">
@@ -239,13 +239,13 @@
             <div class="footer-top">
                 <div class="footer-item">
                     <a href="#" class="footer-logo"></a>
-                    <nav>
+                    <div class="footer-nav-above">
                         <ul class="footer-nav">
                             <li><a href="#events" class="toevent">Мероприятия</a></li>
                             <li><a href="#">Расписание</a></li>
                             <li><a href="#">О компании</a></li>
                         </ul>
-                    </nav>
+                    </div>
                 </div>
                 <div class="footer-social">
                     <a class="footer-mail" href="mailto:info@freefit.com">info@freefit.com</a>
@@ -266,11 +266,13 @@
             <div class="modal-content">
                 <h2 class="modal-title">Заявка на участие «Марафон выносливости»</h2>
                 <p class="modal-description">Заполните все поля, и мы пришлем информацию в ближайшее время</p>
-                <form action="">
-                    <input class="modal-email" type="email" placeholder="Ваш e-mail">
-                    <input class="modal-tel" type="tel" placeholder="Ваш номер телефона">
-                    <button class="modal-btn" type="submit">Отправить</button>
-                </form>
+                <div class="modal-form-above">
+                    <form>
+                        <input class="modal-email" type="email" placeholder="Ваш e-mail">
+                        <input class="modal-tel" type="tel" placeholder="Ваш номер телефона">
+                        <button class="modal-btn" type="submit">Отправить</button>
+                    </form>
+                </div>
                 <button class="modal-close" onclick="closeModal()"></button>
             </div>
         </div>
@@ -279,13 +281,13 @@
             <div class="modal-menu">
                 <div class="modal-menu-item">
                     <a href="#" class="header-logo"></a>
-                    <nav>
+                    <div>
                         <ul class="modal-menu-nav">
                             <li><a href="#events" class="toevent" onclick="closeModalMenu()">Мероприятия</a></li>
-                            <li><a href="#">Расписание</a></li>
-                            <li><a href="#">О компании</a></li>
+                            <li><a href="#timetable" onclick="closeModalMenu()">Расписание</a></li>
+                            <li><a href="#about" onclick="closeModalMenu()">О компании</a></li>
                         </ul>
-                    </nav>
+                    </div>
                 </div>
                 <div class="modal-menu-social">
                     <a href="#" target="_blank" class="header-instagram"></a>
